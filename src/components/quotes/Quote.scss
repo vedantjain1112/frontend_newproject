@@ -1,0 +1,87 @@
+/*== Testimonials ==*/
+.Testimonial{
+  margin: 60px auto;
+  width: 45%;
+  padding: 50px;
+  background-color: #283b5e;
+  border-radius: 5px;
+  position: relative;
+  -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,.5);
+  box-shadow: 1px 1px 10px rgba(0,0,0,.5);
+  
+}
+.Testimonial:after{
+  content: '”';
+  border: 2px solid #fff;
+  background-color: #283b5e;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  margin-left: -25px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 50px;
+  -webkit-box-shadow: 1px 1px 10px rgba(0,0,0,.5);
+  box-shadow: 1px 1px 10px rgba(0,0,0,.5);
+}
+.Testimonial img{
+  height: 100px;
+  width: 100px;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+/* Cars.scss */
+.scrolling-text {
+    animation: scroll 30s linear infinite;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+
+  .fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out; 
+  }
+  
+  .fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in; 
+  }
+  
+
+
+@media(max-width:767px){
+  .Testimonial{
+    width: 90%;
+    padding: 40px 10px;
+  }
+}
+
+
+
+.Testimonial.changing {
+  animation: bubbleAnimation 1s ease-in-out;
+  color: white;
+}
+
+@keyframes bubbleAnimation {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}

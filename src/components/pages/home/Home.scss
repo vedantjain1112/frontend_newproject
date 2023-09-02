@@ -1,0 +1,19 @@
+.neWcaRd{
+    display: none;
+}
+
+@media (max-width:1200px){
+    .cardiAm{
+        display: none;
+    }
+    
+    .neWcaRd {
+        display: block;
+    }
+}
+
+@media(max-width:450px){
+    .neWcaRd {
+        display: none;
+    }
+}

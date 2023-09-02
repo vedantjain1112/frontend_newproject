@@ -1,0 +1,89 @@
+.applicationNews{
+    scroll-behavior: smooth;
+
+}
+
+.newspaper {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    flex-direction: column; 
+    justify-content: space-between; 
+    height: 100%;
+  }
+  
+  .headline {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .headline h1 {
+    margin: 0;
+  }
+  
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    scroll-behavior: smooth;
+  }
+  
+  .content.visible {
+    max-height: 300px; 
+  }
+  
+.content::-webkit-scrollbar{
+    width: 10px;
+    scroll-behavior: smooth;
+}
+
+
+
+.buttonOFFESTivals {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center; 
+    margin-top: auto; 
+  }
+  
+.buttonOFFESTivals:focus {
+    outline: none;
+  }
+  
+  .festivals-intro {
+    text-align: center;
+    padding: 20px;
+    color: black;
+    line-height: 30px;
+    letter-spacing: 2px; 
+    animation: bouncing 4s infinite;
+  }
+  
+
+
+  @keyframes bouncing {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  
+  
+  
+  
+

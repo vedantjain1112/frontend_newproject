@@ -1,0 +1,46 @@
+.theme-toggle {
+    position: relative;
+    cursor: pointer;
+  }
+
+  // .theme-toggle {
+  //   position: fixed;
+  //   top: 132px; 
+  //   right: 50px; 
+  //   z-index: 1000;
+  //   cursor: pointer;
+  // }
+  
+  
+  .toggle-slider {
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .theme-toggle.dark {
+    background-color: #333;
+  }
+  
+  .toggle-slider {
+    width: 30px;
+    height: 30px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+  }
+  
+  .sun-icon,
+  .moon-icon {
+    font-size: 24px;
+    color: #000;
+  }
+  

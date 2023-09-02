@@ -1,0 +1,81 @@
+.cardsContaineriAm{
+    max-height: 250px;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.bycLass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #teEXt{
+    font-size: 3rem;
+    margin-top: 25px;
+    position: relative;
+  }
+  
+  #teEXt::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+  }
+
+
+  .cardsContaineriAm::-webkit-scrollbar {
+    width: 0;
+  }
+
+  @media (max-width: 1200px) {
+    #teEXt {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 991px) {
+
+    .bycLass{
+      margin-bottom: 30px;
+    }
+
+    #teEXt {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #teEXt {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    #teEXt {
+      margin-top: 25px;
+      font-size: 1.5rem;
+    }
+    .bycLass{
+      display: none;
+    }
+  }
+  
+  @media (max-width: 365px) {
+    #teEXt {
+      font-size: 1.2rem;
+    }
+  }
+  
