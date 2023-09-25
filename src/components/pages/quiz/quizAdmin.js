@@ -25,31 +25,6 @@ function QuizAdmin() {
     fetchQuestions();
   }, []);
 
-  // const handleAddQuestion = async () => {
-  //   const trimmedAnswers = newQuestion.answers.map((answer) => answer.trim());
-  //   const cleanedAnswers = trimmedAnswers.filter((answer) => answer !== "");
-
-  //   if (!newQuestion.text || cleanedAnswers.length === 0) {
-  //     console.log(
-  //       "Question fields are empty or contain no valid answers. Not adding question."
-  //     );
-  //     return;
-  //   }
-
-  //   try {
-  //     const response = await axios.post("http://localhost:4000/api/questions", {
-  //       text: newQuestion.text,
-  //       answers: cleanedAnswers,
-  //       correct: newQuestion.correct,
-  //     });
-
-  //     setQuestions([...questions, response.data]);
-  //     setNewQuestion({ text: "", answers: [], correct: 0 });
-  //   } catch (error) {
-  //     console.error("Error adding question:", error);
-  //   }
-  // };
-
   const handleAddQuestion = async () => {
     const trimmedAnswers = newQuestion.answers.map((answer) => answer.trim());
     const cleanedAnswers = trimmedAnswers.filter((answer) => answer !== "");

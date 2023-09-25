@@ -1,0 +1,220 @@
+.parchmentkibody{
+  margin: 0px;
+  padding: 0px;
+  background-image: url( "https://www.faegrebdfiles.com/etimages/holiday-card/2018/lunar-new-year/bg3.jpg" );
+  background-size: 100%;
+}
+
+.tabula{
+    margin: 0 auto;
+}
+
+#top-parchment {
+  margin-left: 35px;
+  margin-right: auto;
+  margin-top: -69px;
+  height: 71px;
+  width: 530px;
+  background: #2b292a;
+  background: url("https://www.faegrebdfiles.com/etimages/holiday-card/2018/lunar-new-year/parchment-texture-v1.jpg");
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0px 10px 30px #000000;
+  z-index: 100 !important;
+  position: absolute;
+  transform-origin: 35% 0;
+}
+
+.parchmenting{
+  // color: #484848;
+  text-shadow: 0px -1px -1px rgba(255,255,255,.5);
+  font-family: 'IM Fell English', Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 20px;
+  font-weight: bold;
+  width: 500px;
+  padding: 0px 10px;
+  margin: 0 auto;
+  margin-top: -5px;
+  z-index: -100 !important;
+  height: 570px;
+  overflow: auto;
+  -webkit-animation: unfurl 3s 1;
+  animation: unfurl 3s 1;
+  background: #f3f0dc;
+  background: -webkit-linear-gradient(#6d481b 25%, #b18d2f 50%, #714a09 100%);
+  background: -o-linear-gradient(#6d481b 25%, #b18d2f 50%, #714a09 100%);
+  background: -moz-linear-gradient(#6d481b 25%, #b18d2f 50%, #714a09 100%);
+  background: linear-gradient(#6d481b 25%, #b18d2f 50%, #714a09 100%);
+  box-shadow: 0px 10px 30px #000000;
+  border: 1px solid #4e2727;
+}
+
+.parchmenting img,
+.parchmenting h1,
+.parchmenting p{
+  -webkit-animation: fadein 3s 1;
+  animation: fadein 3s 1;
+  opacity: 1;
+}
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  25% { opacity: 0; }
+  75% { opacity: 1; }
+}
+
+@keyframes unfurl {
+  0% { height: 20px; }
+  15% { height: 20px; }
+  40% { height: 550px; }
+  50% { height: 520px; }
+  60% { height: 550px; }
+  70% { height: 530px; }
+  90% { height: 550px; }
+}
+
+#papering {
+  overflow: auto;
+  background: #f1f0db;
+  background: -webkit-linear-gradient(#eeecd8 1%, #e4e0d9, #f6f3de 50%, #eeecd8 100%);
+  background: -o-linear-gradient(#eeecd8 1%, #e4e0d9, #f6f3de 50%, #eeecd8 100, #eeecd8 100%);
+  background: -moz-linear-gradient(#eeecd8 1%, #e4e0d9, #f6f3de 50%, #eeecd8 100%);
+  background: linear-gradient(#eeecd8 1%, #e4e0d9, #f6f3de 50%, #eeecd8 100%);
+    background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/seamless_paper_texture.png");
+  box-shadow: 0px 5px 5px #4e4e4e;
+  margin-bottom: 10px;
+}
+
+#papering img {
+  margin-top: 30px;
+}
+
+#top-scroll {
+  margin: 50px auto 0 auto;
+  height: 50px;
+  width: 600px;
+  background: #2b292a;
+  background: -webkit-linear-gradient(#000000 20%, #e4e0d9, #2b292a 80%);
+  background: -o-linear-gradient(#000000 20%, #e4e0d9, #2b292a 80%);
+  background: -moz-linear-gradient(#000000 20%, #e4e0d9, #2b292a 80%);
+  background: linear-gradient(#000000 20%, #e4e0d9, #2b292a 80%);
+  border-radius: 10px;
+}
+
+#top-scroll2 {
+  margin: 0 auto;
+  margin-top: -58px;
+  height: 65px;
+  width: 575px;
+  background: #2b292a;
+  background: -webkit-linear-gradient(#000000 20%, #e4e0d9, #2b292a 80%);
+  background: -o-linear-gradient(#000000 20%, #e4e0d9, #2b292a 80%);
+  background: -moz-linear-gradient(#000000 20%, #e4e0d9, #2b292a 80%);
+  background: linear-gradient(#000000 20%, #e4e0d9, #2b292a 80%);
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px #000000;
+}
+
+#bottom-scroll {
+  margin: 0px auto;
+  height: 50px;
+  width: 600px;
+  background: #2b292a;
+  background: -webkit-linear-gradient(#000000 20%, #e4e0d9, #2b292a 80%);
+  background: -o-linear-gradient(#000000 20%, #e4e0d9, #2b292a 80%);
+  background: -moz-linear-gradient(#000000 20%, #e4e0d9, #2b292a 80%);
+  background: linear-gradient(#000000 20%, #e4e0d9, #2b292a 80%);
+  border-radius: 10px;
+}
+
+#bottom-scroll2 {
+  margin: 0 auto;
+  margin-top: -58px;
+  height: 65px;
+  width: 575px;
+  background: #2b292a;
+  background: -webkit-linear-gradient(#000000 20%, #e4e0d9, #2b292a 80%);
+  background: -o-linear-gradient(#000000 20%, #e4e0d9, #2b292a 80%);
+  background: -moz-linear-gradient(#000000 20%, #e4e0d9, #2b292a 80%);
+  background: linear-gradient(#000000 20%, #e4e0d9, #2b292a 80%);
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px #000000;
+}
+
+#bottom-parchment {
+  margin: 0 auto;
+  margin-top: -69px;
+  height: 71px;
+  width: 530px;
+  background: #2b292a;
+  background: url("https://www.faegrebdfiles.com/etimages/holiday-card/2018/lunar-new-year/parchment-texture-v1.jpg");
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0px -5px 30px #000000;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.aatmaodhaare{
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+
+.formobile{
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .parchmentkibody {
+    font-size: 14px;
+  }
+
+  .tabula {
+    width: 100%;
+  }
+
+  .squeeze {
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  center{
+    margin: 0 auto;
+  }
+
+  .parchmenting {
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  #papering {
+    max-width: none;
+    width: auto;
+    margin: auto;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  .aatmaodhaare {
+    font-size: small;
+    line-height: normal;
+  }
+}
+
+
+
+@media(max-width:451px){
+  .parchmentkibody{
+    display: none;
+  }
+
+  .formobile{
+    display: block;
+  }
+}

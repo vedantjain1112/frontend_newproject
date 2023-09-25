@@ -46,18 +46,17 @@ function Navbar() {
       <div className="header" id="home">
         <div className="logoo">
           <h2>
-            guru
-            <span style={{ marginLeft: "0" }}>Raj</span>
+            g<span style={{ marginLeft: "0" }}>rs</span>
           </h2>
         </div>
-        <nav className={isNavBarActive ? "active" : ""}>
+        <nav className={isNavBarActive ? "active" : ""} id="navimumbai">
           <ul className="links" style={{ cursor: "pointer" }}>
             <li>
               <ScrollLink
                 to="home"
                 smooth={true}
                 duration={500}
-                className="active"
+                className="active anchorTAGHUmein"
                 style={{
                   color: "#0ef",
                 }}
@@ -66,18 +65,43 @@ function Navbar() {
               </ScrollLink>
             </li>
             <li>
-              <ScrollLink to="chaturmas" smooth={true} duration={500}>
+              <ScrollLink
+                to="chaturmas"
+                smooth={true}
+                duration={500}
+                className="anchorTAGHUmein"
+              >
                 Chaturmas
               </ScrollLink>
             </li>
             <li>
-              <ScrollLink to="tirthankara" smooth={true} duration={500}>
+              <ScrollLink
+                to="tirthankara"
+                smooth={true}
+                duration={500}
+                className="anchorTAGHUmein"
+              >
                 24 Tirthankara's
               </ScrollLink>
             </li>
             <li>
-              <ScrollLink to="fmt" smooth={true} duration={500}>
+              <ScrollLink
+                to="fmt"
+                smooth={true}
+                duration={500}
+                className="anchorTAGHUmein"
+              >
                 Famous Tirth Locations
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink
+                to="qz"
+                smooth={true}
+                duration={500}
+                className="anchorTAGHUmein"
+              >
+                Quiz
               </ScrollLink>
             </li>
           </ul>

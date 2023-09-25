@@ -204,19 +204,6 @@ function Quiz() {
     fetchQuestions();
   }, [selectedDifficulty]);
 
-  // useEffect(() => {
-  //   async function fetchQuestions() {
-  //     try {
-  //       const response = await axios.get("/api/questions");
-  //       setQuestions(response.data);
-  //     } catch (error) {
-  //       console.error("Error fetching questions:", error);
-  //     }
-  //   }
-
-  //   fetchQuestions();
-  // }, []);
-
   function QuestionCorrection({ wrong, correct, empty }) {
     return (
       <div className="correction">
@@ -311,117 +298,120 @@ function Quiz() {
     }
   }, [question.value]);
 
-  const questionComponent = questions.length > 0 && (
-    <Question
-      data={questions[question.value]}
-      buttonText={
-        question.value < totalQuestion ? "Next Question" : "Finish Quiz"
-      }
-      onQuestionButtonClick={handleNewQuestionClick}
-    />
-  );
+  const questionComponent = questions.length > 0 &&
+    question.value < questions.length && (
+      <Question
+        data={questions[question.value]}
+        buttonText={
+          question.value < totalQuestion ? "Next Question" : "Finish Quiz"
+        }
+        onQuestionButtonClick={handleNewQuestionClick}
+      />
+    );
 
   return (
-    <div
-      className="game"
-      ref={gameRef}
-      data-game-started={gameStarted ? true : null}
-      data-game-finished={question.value > totalQuestion ? true : null}
-    >
+    <div className="qz">
       <div
-        className="intro"
-        style={{
-          background: "rgb(149, 233, 227)",
-        }}
+        className="game"
+        ref={gameRef}
+        data-game-started={gameStarted ? true : null}
+        data-game-finished={question.value > totalQuestion ? true : null}
       >
-        <div className="intro-inner">
-          <h1 className="intro-title" style={{ color: "#1f8197" }}>
-            How much you know about JAINISM?
-          </h1>
-          {!gameStarted && (
-            <>
-              <select
-                className="difficulty-select"
-                onChange={(e) => setSelectedDifficulty(e.target.value)}
-                value={selectedDifficulty}
-                style={{
-                  color: "#1f8197",
-                  background: "transparent",
-                  border: "2px solid teal",
-                  borderRadius: "5px",
-                  margin: "5px",
-                }}
-              >
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="hard">Hard</option>
-              </select>
-              <p
-                className="intro-desc"
-                style={{
-                  color: "#1f8197",
-                }}
-              >
-                {`The quiz contains ${questions.length} questions and there is no time limit.`}
-              </p>
+        <div
+          className="intro"
+          style={{
+            background: "rgb(149, 233, 227)",
+          }}
+        >
+          <div className="intro-inner">
+            <h1 className="intro-title" style={{ color: "#1f8197" }}>
+              How much you know about JAINISM?
+            </h1>
+            {!gameStarted && (
+              <>
+                <select
+                  className="difficulty-select"
+                  onChange={(e) => setSelectedDifficulty(e.target.value)}
+                  value={selectedDifficulty}
+                  style={{
+                    color: "#1f8197",
+                    background: "transparent",
+                    border: "2px solid teal",
+                    borderRadius: "5px",
+                    margin: "5px",
+                  }}
+                >
+                  <option value="easy">Easy</option>
+                  <option value="medium">Medium</option>
+                  <option value="hard">Hard</option>
+                </select>
+                <p
+                  className="intro-desc"
+                  style={{
+                    color: "#1f8197",
+                  }}
+                >
+                  {`The quiz contains ${questions.length} questions and there is no time limit.`}
+                </p>
 
-              <button
-                className="intro-button"
-                onClick={() => setGameStarted(true)}
-                style={{
-                  marginTop: "-30px",
-                }}
-              >
-                Start Quiz
-              </button>
+                <button
+                  className="intro-button"
+                  onClick={() => setGameStarted(true)}
+                  style={{
+                    marginTop: "-30px",
+                  }}
+                >
+                  Start Quiz
+                </button>
+              </>
+            )}
+            {gameStarted && (
+              <div className="indicator">
+                {questions.map((q, index) => {
+                  return (
+                    <span
+                      className="indicator-item"
+                      style={{
+                        backgroundColor: indicatorBg(index),
+                      }}
+                    />
+                  );
+                })}
+              </div>
+            )}
+            <Results
+              wrong={wrong.value}
+              correct={correct.value}
+              empty={empty.value}
+            />
+            <button
+              className="restart-button"
+              onClick={() => handleRestartClick()}
+              style={{
+                color: "black",
+              }}
+            >
+              Restart Quiz
+            </button>
+          </div>
+        </div>
+        <div className="game-area">
+          {questions[question.value] && (
+            <Question
+              data={questions[question.value]}
+              buttonText={
+                question.value < totalQuestion ? "Next Question" : "Finish Quiz"
+              }
+              onQuestionButtonClick={handleNewQuestionClick}
+            />
+          )}
+
+          {!questions[question.value] && (
+            <>
+              <QuestionCorrection data={questions} />
             </>
           )}
-          {gameStarted && (
-            <div className="indicator">
-              {questions.map((q, index) => {
-                return (
-                  <span
-                    className="indicator-item"
-                    style={{
-                      backgroundColor: indicatorBg(index),
-                    }}
-                  />
-                );
-              })}
-            </div>
-          )}
-          <Results
-            wrong={wrong.value}
-            correct={correct.value}
-            empty={empty.value}
-          />
-          <button
-            className="restart-button"
-            onClick={() => handleRestartClick()}
-            style={{
-              color: "black",
-            }}
-          >
-            Restart Quiz
-          </button>
         </div>
-      </div>
-      <div className="game-area">
-        {questions[question.value] && (
-          <Question
-            data={questions[question.value]}
-            buttonText={
-              question.value < totalQuestion ? "Next Question" : "Finish Quiz"
-            }
-            onQuestionButtonClick={handleNewQuestionClick}
-          />
-        )}
-
-        {!questions[question.value] && (
-          <>
-            <QuestionCorrection data={questions} />
-          </>
-        )}
       </div>
     </div>
   );

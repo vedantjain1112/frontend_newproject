@@ -81,6 +81,7 @@ function Card() {
                           दादा आदिनाथ <br /> (Rishabhdev Ji)
                         </h3>
                         <p className="inside-page__text">प्रतीक चिन्ह : बैल</p>
+                        <p className="inside-page__text">वर्ण : कंचन</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--city"
@@ -125,9 +126,10 @@ function Card() {
                     <div className="inside-page">
                       <div className="inside-page__container">
                         <h3 className="inside-page__heading inside-page__heading--ski">
-                          अजीतनाथ दादा <br /> (Ajitnath Ji)
+                          अजीतनाथ जी <br /> (Ajitnath Ji)
                         </h3>
                         <p className="inside-page__text">प्रतीक चिन्ह : हाथी</p>
+                        <p className="inside-page__text">वर्ण : कंचन</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--ski"
@@ -176,6 +178,7 @@ function Card() {
                         <p className="inside-page__text">
                           प्रतीक चिन्ह : घोड़ा
                         </p>
+                        <p className="inside-page__text">वर्ण : कंचन</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--beach"
@@ -222,6 +225,7 @@ function Card() {
                           अभिनंदन जी <br /> (Abhinandan Swami Ji)
                         </h3>
                         <p className="inside-page__text">प्रतीक चिन्ह : बंदर</p>
+                        <p className="inside-page__text">वर्ण : कंचन</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--camping"
@@ -267,7 +271,10 @@ function Card() {
                         <h3 className="inside-page__heading inside-page__heading--city">
                           सुमतिनाथ जी <br /> (Sumatinath Ji)
                         </h3>
-                        <p className="inside-page__text">प्रतीक चिन्ह : चकवा</p>
+                        <p className="inside-page__text">
+                          प्रतीक चिन्ह : कौंच पक्षी
+                        </p>
+                        <p className="inside-page__text">वर्ण : कंचन</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--city"
@@ -312,10 +319,11 @@ function Card() {
                     <div className="inside-page">
                       <div className="inside-page__container">
                         <h3 className="inside-page__heading inside-page__heading--ski">
-                          पद्मरभु जी <br />
-                          (Padmaprabhu Ji)
+                          पद्मप्रभ स्वामीजी <br />
+                          (Padmaprabh Swami Ji)
                         </h3>
                         <p className="inside-page__text">प्रतीक चिन्ह : कमल</p>
+                        <p className="inside-page__text">वर्ण : कंचन</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--ski"
@@ -362,8 +370,9 @@ function Card() {
                           सुपार्श्वनाथ जी <br /> (Suparshvanath Ji)
                         </h3>
                         <p className="inside-page__text">
-                          प्रतीक चिन्ह : साथिया
+                          प्रतीक चिन्ह : स्वास्तिक/साथिया
                         </p>
+                        <p className="inside-page__text">वर्ण : कंचन</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--beach"
@@ -407,12 +416,14 @@ function Card() {
                     <div className="inside-page">
                       <div className="inside-page__container">
                         <h3 className="inside-page__heading inside-page__heading--camping">
-                          चंदा प्रभु जी <br />
-                          (Chandaa Prabhu Ji)
+                          चन्द्रप्रभ स्वामी जी
+                          <br />
+                          (Chandra Prabh Swami Ji)
                         </h3>
                         <p className="inside-page__text">
-                          प्रतीक चिन्ह : चंद्रमा
+                          प्रतीक चिन्ह : चंद्र
                         </p>
+                        <p className="inside-page__text">वर्ण : उज्जवल</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--camping"
@@ -459,6 +470,7 @@ function Card() {
                           सुविधिनाथ जी <br /> (Suvidhinath Ji)
                         </h3>
                         <p className="inside-page__text">प्रतीक चिन्ह : मगर</p>
+                        <p className="inside-page__text">वर्ण : उज्जवल</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--city"
@@ -507,8 +519,9 @@ function Card() {
                           (Sheetalnath Ji)
                         </h3>
                         <p className="inside-page__text">
-                          प्रतीक चिन्ह : कल्पव्रक्ष
+                          प्रतीक चिन्ह : श्रीवच्छ
                         </p>
+                        <p className="inside-page__text">वर्ण : कंचन</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--ski"
@@ -557,6 +570,7 @@ function Card() {
                         <p className="inside-page__text">
                           प्रतीक चिन्ह : गेंडा
                         </p>
+                        <p className="inside-page__text">वर्ण : कंचन</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--beach"
@@ -603,8 +617,9 @@ function Card() {
                           वासुपूज्य जी <br /> (Vasupujya Swami Ji)
                         </h3>
                         <p className="inside-page__text">
-                          प्रतीक चिन्ह : भैंसा
+                          प्रतीक चिन्ह : भैंसा/पाड़ा
                         </p>
+                        <p className="inside-page__text">वर्ण : लाल</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--camping"
@@ -650,7 +665,8 @@ function Card() {
                         <h3 className="inside-page__heading inside-page__heading--city">
                           विमलनाथ जी <br /> (Vimalnath Ji)
                         </h3>
-                        <p className="inside-page__text">प्रतीक चिन्ह : शूकर</p>
+                        <p className="inside-page__text">प्रतीक चिन्ह : वराह</p>
+                        <p className="inside-page__text">वर्ण : कंचन</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--city"
@@ -697,7 +713,8 @@ function Card() {
                         <h3 className="inside-page__heading inside-page__heading--ski">
                           अनन्तनाथ जी <br /> (Anantnath Ji)
                         </h3>
-                        <p className="inside-page__text">प्रतीक चिन्ह : सेही</p>
+                        <p className="inside-page__text">प्रतीक चिन्ह : बाज</p>
+                        <p className="inside-page__text">वर्ण : कंचन</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--ski"
@@ -743,9 +760,8 @@ function Card() {
                         <h3 className="inside-page__heading inside-page__heading--beach">
                           धर्मनाथ जी <br /> (Dharmanath Ji)
                         </h3>
-                        <p className="inside-page__text">
-                          प्रतीक चिन्ह : ब्रजदंड
-                        </p>
+                        <p className="inside-page__text">प्रतीक चिन्ह : वज्र</p>
+                        <p className="inside-page__text">वर्ण : कंचन</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--beach"
@@ -791,7 +807,10 @@ function Card() {
                         <h3 className="inside-page__heading inside-page__heading--camping">
                           शांतिनाथ जी <br /> (Shantinath Ji)
                         </h3>
-                        <p className="inside-page__text">प्रतीक चिन्ह : हिरण</p>
+                        <p className="inside-page__text">
+                          प्रतीक चिन्ह : मृग/हिरण
+                        </p>
+                        <p className="inside-page__text">वर्ण : कंचन</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--camping"
@@ -838,6 +857,7 @@ function Card() {
                           कुंथुनाथ जी <br /> (Kunthunath Ji)
                         </h3>
                         <p className="inside-page__text">प्रतीक चिन्ह : बकरा</p>
+                        <p className="inside-page__text">वर्ण : कंचन</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--city"
@@ -882,9 +902,12 @@ function Card() {
                     <div className="inside-page">
                       <div className="inside-page__container">
                         <h3 className="inside-page__heading inside-page__heading--ski">
-                          अरहनाथ जी <br /> (Arhanath Ji)
+                          अरनाथजी <br /> (Arhanath Ji)
                         </h3>
-                        <p className="inside-page__text">प्रतीक चिन्ह : मछली</p>
+                        <p className="inside-page__text">
+                          प्रतीक चिन्ह : नंदाव्रत
+                        </p>
+                        <p className="inside-page__text">वर्ण : कंचन</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--ski"
@@ -930,7 +953,8 @@ function Card() {
                         <h3 className="inside-page__heading inside-page__heading--beach">
                           मल्लिनाथ जी <br /> (Mallinath Ji)
                         </h3>
-                        <p className="inside-page__text">प्रतीक चिन्ह : कलश</p>
+                        <p className="inside-page__text">प्रतीक चिन्ह : कुंभ</p>
+                        <p className="inside-page__text">वर्ण : हरा</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--beach"
@@ -977,6 +1001,7 @@ function Card() {
                           मुनिसुव्रत जी <br /> (Munisuvrat Swami Ji)
                         </h3>
                         <p className="inside-page__text">प्रतीक चिन्ह : कछुआ</p>
+                        <p className="inside-page__text">वर्ण : श्याम</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--camping"
@@ -1023,8 +1048,9 @@ function Card() {
                           नमिनाथ जी <br /> (Namimath Ji)
                         </h3>
                         <p className="inside-page__text">
-                          प्रतीक चिन्ह : नीलकमल
+                          प्रतीक चिन्ह : हराकमल
                         </p>
+                        <p className="inside-page__text">वर्ण : कंचन</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--city"
@@ -1072,6 +1098,7 @@ function Card() {
                           अरिष्टनेमि जी <br /> (Neminath Dada)
                         </h3>
                         <p className="inside-page__text">प्रतीक चिन्ह : शंख</p>
+                        <p className="inside-page__text">वर्ण : श्याम</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--ski"
@@ -1118,6 +1145,7 @@ function Card() {
                           पार्श्वनाथ जी <br /> (Parshvanath Ji)
                         </h3>
                         <p className="inside-page__text">प्रतीक चिन्ह : सर्प</p>
+                        <p className="inside-page__text">वर्ण : हरा</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--beach"
@@ -1164,6 +1192,7 @@ function Card() {
                           महावीर स्वामी जी <br /> (Mahavira Swami Ji)
                         </h3>
                         <p className="inside-page__text">प्रतीक चिन्ह : सिंह</p>
+                        <p className="inside-page__text">वर्ण : कंचन</p>
                         <Link
                           to="#"
                           className="inside-page__btn inside-page__btn--camping"

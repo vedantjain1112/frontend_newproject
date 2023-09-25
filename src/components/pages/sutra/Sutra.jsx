@@ -13,7 +13,7 @@ function Sutra() {
     <>
       <div className="mainclassOFSUTra">
         <div className="buttonConTAINERS">
-          <Link to="/">
+          <Link to="/" key="home-link">
             <button
               style={{
                 backgroundImage:
@@ -37,7 +37,7 @@ function Sutra() {
               <div className="carding">
                 <h2>{card.title}</h2>
                 <div className="contenting">
-                  <a href={card.downloadLink} download="">
+                  <a href={card.downloadLink} download="" target="_blank">
                     Download
                   </a>
                 </div>

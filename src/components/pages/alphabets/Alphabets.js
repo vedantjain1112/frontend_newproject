@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Alphabets.scss";
 
 function Alphabets() {
@@ -308,79 +309,88 @@ function Alphabets() {
   };
 
   const handleClick = (letter) => {
-    setSelectedLetter(letter);
+    if (facts.hasOwnProperty(letter)) {
+      setSelectedLetter(letter);
+    } else {
+      setSelectedLetter(null);
+    }
   };
 
   return (
-    <div className="apliosis">
-      <main className="mainhu">
-        <header className="Iamhedr">
-          <h1>Alphabet Facts</h1>
-        </header>
-        <ul className="listGroupss">
-          {alphabet.map((letter) => (
-            <li key={letter} onClick={() => handleClick(letter)}>
-              <button>{letter}</button>
-            </li>
-          ))}
-        </ul>
-        <div className={`fact-modal-wrapper ${selectedLetter ? "active" : ""}`}>
-          <div className="modal-card">
-            {selectedLetter && (
-              <>
-                <div className="modal-content" style={{ overflow: "auto" }}>
-                  <img
-                    className="letter-image"
-                    src={facts[selectedLetter].image}
-                    alt={facts[selectedLetter].letter}
-                  />
-                  <div className="modal-text" style={{ overflow: "auto" }}>
-                    <h1>{facts[selectedLetter].letter}</h1>
+    <>
+      <div className="apliosis">
+        <main className="mainhu">
+          <header className="Iamhedr">
+            <h1>Alphabet Facts</h1>
+          </header>
+          <ul className="listGroupss">
+            {alphabet.map((letter) => (
+              <li key={letter} onClick={() => handleClick(letter)}>
+                <button className="leTTERclassING">{letter}</button>
+              </li>
+            ))}
+          </ul>
+          <div
+            className={`fact-modal-wrapper ${selectedLetter ? "active" : ""}`}
+          >
+            <div className="modal-card">
+              {selectedLetter && (
+                <>
+                  <div className="modal-content" style={{ overflow: "auto" }}>
+                    <img
+                      className="letter-image"
+                      src={facts[selectedLetter].image}
+                      alt={facts[selectedLetter].letter}
+                    />
+                    <div className="modal-text" style={{ overflow: "auto" }}>
+                      <h1>{facts[selectedLetter].letter}</h1>
 
-                    <h2
-                      style={{
-                        fontSize: "27px",
-                      }}
-                    >
-                      {facts[selectedLetter].heading}
-                    </h2>
-                    <h3
-                      style={{
-                        fontSize: "23px",
-                      }}
-                    >
-                      {facts[selectedLetter].subheading}
-                    </h3>
-                    <p
-                      style={{
-                        overflow: "auto",
-                        padding: "20px",
-                      }}
-                    >
-                      {facts[selectedLetter].text1}
-                    </p>
-                    <p
-                      style={{
-                        overflow: "auto",
-                        padding: "20px",
-                      }}
-                    >
-                      {facts[selectedLetter].text2}
-                    </p>
+                      <h2
+                        style={{
+                          fontSize: "27px",
+                        }}
+                      >
+                        {facts[selectedLetter].heading}
+                      </h2>
+                      <h3
+                        style={{
+                          fontSize: "23px",
+                        }}
+                      >
+                        {facts[selectedLetter].subheading}
+                      </h3>
+                      <p
+                        style={{
+                          overflow: "auto",
+                          padding: "20px",
+                        }}
+                      >
+                        {facts[selectedLetter].text1}
+                      </p>
+                      <p
+                        style={{
+                          overflow: "auto",
+                          padding: "20px",
+                        }}
+                      >
+                        {facts[selectedLetter].text2}
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <button
-                  id="closeModal_btn"
-                  onClick={() => setSelectedLetter(null)}
-                >
-                  X
-                </button>
-              </>
-            )}
+                  <button
+                    className="leTTERclassING"
+                    id="closeModal_btn"
+                    onClick={() => setSelectedLetter(null)}
+                  >
+                    X
+                  </button>
+                </>
+              )}
+            </div>
           </div>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
+    </>
   );
 }
 

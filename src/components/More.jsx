@@ -6,7 +6,7 @@ function More() {
     <>
       <div className="byc" id="fmt">
         <div className="context">
-          <h1 id="texting">Famous Tirth Locations</h1>
+          <h1 id="texting">Famous Tirth Locations 🛕</h1>
         </div>
       </div>
       <div className="main-wrapper">

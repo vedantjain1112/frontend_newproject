@@ -1,3 +1,14 @@
+.manclsh{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 300px;
+  background: #1e293b;
+  color: #f8fafc;
+  margin: 0;
+  overflow-x: hidden;
+}
+
 .appls {
     display: flex;
     align-items: center;
@@ -20,6 +31,7 @@
     text-decoration: none;
     flex-wrap: wrap;
     justify-content: center;
+
   }
   
   .loop-slider {
@@ -43,11 +55,11 @@
     background-color: #334155;
     border-radius: 0.4rem;
     padding: 0.7rem 1rem;
-    margin-right: 1rem; // Must used margin-right instead of gap for the loop to be smooth
+    margin-right: 1rem; 
     box-shadow: 0 0.1rem 0.2rem rgb(0 0 0 / 20%), 0 0.1rem 0.5rem rgb(0 0 0 / 30%),
       0 0.2rem 1.5rem rgb(0 0 0 / 40%);
       text-decoration: none;
-  }
+    }
 
   .tag:hover{
     text-decoration: none;
@@ -62,47 +74,81 @@
       transparent 30%,
       transparent 70%,
       #1e293b
-    );
-    position: absolute;
-    inset: 0;
-  }
-
-
-
-  @keyframes loop {
-    0% {
-      transform: translateX(0);
+      );
+      position: absolute;
+      inset: 0;
     }
-    100% {
-      transform: translateX(-50%);
+
+
+    
+    
+    
+    @keyframes loop {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
     }
+    
+    
+    .TEXTEDBY{
+      display: none;
+    }
+
+    .ctxt{
+      display: block;
+    }
+
+
+    .underlined-text {
+      position: relative;
+    }
+    
+    .underlined-text::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px; 
+      background-color: red; 
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin-top: 5px;
+    }
+    
+
+@media (max-width: 768px) {
+
+  .ctxt{
+    display: none;
   }
+
+
+  .TEXTEDBY{
+    display: block;
+  }
+
+  .tag-list {
+    max-width: 100%; 
+  }
+}
+
+@media (max-width: 480px) {
   
-
-  .manclsh{
-    background: #1e293b;
-    color: #f8fafc;
-    margin: 0;
+  .tag-list {
+    width: 100%; 
+    max-width: 100%; 
   }
 
-
-  .manclsh{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 300px;
+  .tag {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+    margin: 0.5rem; 
+    max-width: 100%; 
+    text-align: center; 
   }
+}
 
 
-// /* Styles for screens with a maximum width of 768px (mobile and small tablets) */
-// @media screen and (max-width: 768px) {
-//   .tag-list {
-//     width: 100%; /* Make the tag list full width on smaller screens */
-//     padding: 1rem; /* Adjust padding for smaller screens */
-//   }
-  
-//   /* Adjust the font size for tags on smaller screens if needed */
-//   .tag {
-//     font-size: 0.8rem;
-//   }
-// }

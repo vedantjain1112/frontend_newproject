@@ -1,0 +1,239 @@
+$green: #789cff;
+
+$boxShadow: 0px 0px 24px 6px rgba(black, 0.08);
+
+@function ultra-unique-gray($color){
+  @return rgb($color, $color, $color);
+}
+
+@mixin ultra-unique-center {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes ultra-unique-fadeIn {
+  from {
+    opacity: 0;
+  }
+  
+  to {
+    opacity: 1;
+  }
+}
+
+.ultra-unique-body{
+  margin: 0px;
+  overflow: hidden;
+  padding: 0px;
+  
+  .oneHHHH, .tageswarpagle, #lconenotone, a {
+    font-family: "Roboto", sans-serif;
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
+#ultra-unique-app{
+  background-color: $green;
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+  
+  #ultra-unique-cards-wrapper{
+    @include ultra-unique-center;
+    padding: 50px;
+    
+    #ultra-unique-cards{
+      height: 500px;
+      position: relative;
+      width: 1000px;
+      
+      .ultra-unique-card-wrapper{
+        height: 400px;
+        position: absolute;
+        top: 50%;
+        transition: all 0.25s;
+        width: 280px;
+        
+        &:not(.selected):hover{
+          cursor: pointer;
+          
+          .ultra-unique-card{
+            top: calc(50% - 50px);
+            
+            .ultra-unique-icon{
+              .iceCREAM{
+                color: $green;
+              }
+            }
+          }
+        }
+        
+        &:first-child{
+          top: calc(50% + 50px);
+          transform: translateY(-50%) rotate(-10deg);
+        }
+        
+        &:nth-child(2){
+          top: calc(50% + 20px);
+          transform: translateY(-50%) rotate(-5deg);
+        }
+        
+        &:nth-child(3){
+          top: 50%;
+          transform: translateY(-50%) rotate(0deg);
+        }
+        
+        &:nth-child(4){
+          top: calc(50% + 20px);
+          transform: translateY(-50%) rotate(5deg);
+        }
+        
+        &:nth-child(5){
+          top: calc(50% + 50px);
+          transform: translateY(-50%) rotate(10deg);
+        }
+        
+        &.selected{
+          height: 800px;
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(0deg);
+          width: 560px;
+          
+          .ultra-unique-card{
+            height: 600px;
+            width: 560px;
+            
+            .ultra-unique-icon{
+              top: 20px;
+              transform: translate(-50%, 0px);
+              
+              .iceCREAM{
+                color: $green;
+              }
+            }
+          }
+        }
+        
+        .ultra-unique-card{
+          background-color: white;
+          border-radius: 20px;
+          box-shadow: $boxShadow;
+          height: 400px;
+          overflow: hidden;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: all 0.25s;
+          width: 280px;
+          
+          .ultra-unique-icon{
+            @include ultra-unique-center;
+            text-align: center;
+            transition: all 0.25s;
+            
+            .iceCREAM{
+              color: ultra-unique-gray(180);
+              font-size: 6em;
+              height: 150px;
+              line-height: 150px;
+              width: 150px;
+            }
+          }
+          
+          .ultra-unique-content{
+            animation: ultra-unique-fadeIn 1s;
+            margin-top: 170px;
+            
+            .ultra-unique-title{
+              .oneHHHH{
+                color: $green;
+                font-size: 3em;
+                font-weight: 300;
+                text-align: center;
+              }
+            }
+            
+            .ultra-unique-text{
+              margin-top: 100px;
+              padding: 20px 40px;
+              
+              .tageswarpagle{
+                color: ultra-unique-gray(120);
+                font-size: 2em;
+                font-weight: 300;
+                text-align: center;
+              }
+            }
+            
+            .ultra-unique-close-button{
+              background-color: white;
+              border: none;
+              border-radius: 100px;
+              bottom: 20px;
+              box-shadow: $boxShadow;
+              cursor: pointer;
+              height: 50px;
+              left: 50%;
+              outline: none;
+              padding: 0px;
+              position: absolute;
+              transform: translateX(-50%);
+              transition: all 0.25s;
+              width: 50px;
+              margin-top: 200px;
+              
+              &:hover,
+              &:focus{
+                bottom: 25px;
+                
+                .iceCREAM{
+                  color: $green;
+                }
+              }
+              
+              .iceCREAM{
+                color: ultra-unique-gray(120);
+                font-size: 1.5em;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                width: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  #ultra-unique-youtube-link{
+    bottom: 0px;
+    color: ultra-unique-gray(90);
+    font-size: 1.25em;
+    font-weight: 700;
+    margin: 20px;
+    position: fixed;
+    right: 0px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+@media(max-width: 1200px) {
+  #ultra-unique-app {
+    #ultra-unique-cards-wrapper {
+      transform: translate(-50%, -50%) scale(0.7);
+    }
+  }
+}
+
+@media(max-width: 800px) {
+  #ultra-unique-app {
+    #ultra-unique-cards-wrapper {
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+  }
+}

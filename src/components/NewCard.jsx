@@ -840,7 +840,7 @@ function NewCard() {
                 <div className="insidePage">
                   <div className="insidePageContainer">
                     <h3 className="insidePageHeading insidePageHeadingCity">
-                      नमिनाथ जी (Namimath Ji)
+                      नमिनाथ जी (Naminath Ji)
                     </h3>
                     <p className="insidePageText">प्रतीक चिन्ह : नीलकमल</p>
                     <Link to="#" className="insidePageBtn insidePageBtnCity">

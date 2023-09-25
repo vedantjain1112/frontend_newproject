@@ -1,0 +1,110 @@
+.iAMTABLE {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 20px auto;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+  }
+
+  .tcb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .unicity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    color: #333;
+  }
+  
+  .theC,
+  .tableKAdata {
+    padding: 12px;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(3, 97, 9);
+    // color: rgb(81, 4, 74);
+  }
+  
+  .theC {
+    background-color: #333;
+    color: white;
+  }
+  
+  .tableROWsCLASS:nth-child(even) {
+    background-color: #ddd;
+  }
+  
+  .grand-total {
+    font-weight: bold;
+  }
+  
+  .center-text {
+    text-align: center;
+  }
+  
+  
+  .parentra {
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 2px;
+  }
+  
+  .tags0fHteen {
+    text-align: center;
+  }
+  
+  @keyframes fadeIns {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIns 2s ease-in-out;
+  }
+  
+  .animate-slide-in {
+    animation: slideInRight 2s ease-in-out;
+  }
+  
+  .animate-fade-in-scale {
+    animation: fadeInScale 2s ease-in-out;
+  }
+  

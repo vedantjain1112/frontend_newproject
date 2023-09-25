@@ -92,3 +92,16 @@ main p {
   width: 100%;
   height: 100%;
 }
+
+.paragraphTagging{
+    line-height: 60px;
+    letter-spacing: 3px;
+}
+
+
+@media (max-width:768px){
+  .paragraphTagging{
+    letter-spacing: 2px;
+    line-height: 20px;
+  }
+}

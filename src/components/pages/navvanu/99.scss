@@ -1,0 +1,97 @@
+.navannuBody{
+    height: 100vh;
+}
+  
+.navannu99{
+    text-align: center;
+    margin-bottom: 30px;
+}
+  
+  .section99 {
+    width: 61.8%;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  
+  .unorderedLIST {
+    font-size: 1.25em;
+    padding: 0;
+  }
+  
+  .listingLI {
+    list-style: none;
+    display: block;
+    height: 2.63em;
+    color: #fff;
+    background-color: red;
+    margin-bottom: 1em;
+    margin-right: 38%;
+    padding-left: 3em;
+    line-height: 2.6em;
+    white-space: nowrap;
+    border-radius: 1.3em 0 0 1.3em;
+    position: relative;
+    box-shadow: 1px 1px rgba(255, 255, 255, 0.15);
+    animation: moveout;
+    animation-duration: 1.5s;
+    animation-delay: 0.5s;
+  }
+  
+  .listingLI.anim.ated {
+    width: 62%;
+  }
+  
+  .listingLI::before {
+    content: "\2713";
+    display: block;
+    color: #fff;
+    text-align: center;
+    background-color: #131313;
+    border-radius: 50%;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    position: absolute;
+    left: 0.3em;
+    top: 0.3em;
+  }
+  
+  .listingLI::after {
+    content: "";
+    // background-color: #fff;
+    background-color: red;
+    display: block;
+    height: 2.6em;
+    width: 0;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    transform: skewY(30deg);
+    transform-origin: 0 0;
+    transition: 0.5s ease-out all;
+    box-shadow: 1px 1px rgba(255, 255, 255, 0.15);
+  }
+  
+  .listingLI.anim.ated::after {
+    width: 38%;
+  }
+  
+  @keyframes moveout {
+    0% {
+      width: 2.6em;
+      overflow: hidden;
+    }
+    100% {
+      width: 62%;
+    }
+  }
+  
+  @keyframes diagon {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 38%;
+    }
+  }
+  

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Sallekhna.scss";
 
@@ -14,64 +14,11 @@ function Sallekhna() {
 
   function ScrollHeight() {
     var content = document.querySelector("#parchment");
-    var container = document.querySelector("#contain");
+    var container = document.querySelector("#containingPart");
     if (content && container) {
       content.style.height = container.offsetHeight + "px";
     }
   }
-
-  // function speakText(text) {
-  //   const speech = new SpeechSynthesisUtterance();
-  //   speech.text = text;
-  //   speech.lang = "hi-IN";
-  //   speechSynthesis.cancel();
-  //   speechSynthesis.speak(speech);
-  // }
-
-  function speakText(text, callback) {
-    const speech = new SpeechSynthesisUtterance();
-    speech.text = text;
-    speech.lang = "hi-IN";
-
-    speech.onend = () => {
-      if (typeof callback === "function") {
-        callback(); // Call the callback function when speech ends
-      }
-    };
-
-    speechSynthesis.cancel(); // Cancel any ongoing speech synthesis
-    speechSynthesis.speak(speech);
-  }
-
-  // async function handleReadClick() {
-  //   console.log("handleReadClick called");
-  //   const hindiTextElement = document.getElementById("containingPart");
-  //   console.log("hindiTextElement:", hindiTextElement);
-  //   if (hindiTextElement) {
-  //     const hindiText = hindiTextElement.innerText;
-  //     console.log("hindiText:", hindiText);
-  //     await speakText(hindiText);
-  //   }
-  // }
-
-  function handleReadClick() {
-    console.log("handleReadClick called");
-    const hindiTextElement = document.getElementById("containingPart");
-    console.log("hindiTextElement:", hindiTextElement);
-    if (hindiTextElement) {
-      const hindiText = hindiTextElement.innerText;
-      console.log("hindiText:", hindiText);
-
-      speakText(hindiText, () => {
-        console.log("Speech playback finished.");
-      });
-    }
-  }
-
-  window.speechSynthesis.onvoiceschanged = () => {
-    const voices = window.speechSynthesis.getVoices();
-    console.log("Available voices:", voices);
-  };
 
   return (
     <>
@@ -109,30 +56,6 @@ function Sallekhna() {
               </button>{" "}
             </Link>
           </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              marginTop: "20px",
-              textDecoration: "none",
-            }}
-          >
-            <button
-              style={{
-                backgroundImage:
-                  "url(https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)",
-                borderRadius: "5px",
-                width: "150px",
-                cursor: "pointer",
-                textDecoration: "none",
-                color: "#fff",
-              }}
-              onClick={handleReadClick}
-            >
-              Read
-            </button>{" "}
-          </div>
         </div>
         <div className="verywellknownMain">
           <main>
@@ -148,12 +71,7 @@ function Sallekhna() {
                   }}
                 />
               </p>
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paragraphTagging">
                 सल्लेखना स्वेच्छा से मृत्यु का आलिंगन कर रही है जब गृहस्थ और
                 संन्यासी दोनों को यह अनुमान होता है कि बुढ़ापे, असाध्य रोग,
                 भयंकर अकाल, शत्रु या जंगली जानवर के हमले आदि के कारण जीवन का अंत
@@ -168,12 +86,7 @@ function Sallekhna() {
                 फिर से शुरू करना चाहिए।
               </p>
               <br />
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paragraphTagging">
                 सल्लेखना करना एक बहुत ही विशेष व्रत है। इस व्रत के पीछे सिद्धांत
                 यह है कि एक व्यक्ति बिना किसी डर के पूर्ण शांति, शांति और धैर्य
                 के साथ इस शरीर का त्याग करता है, न केवल नए कर्मों के आगमन को
@@ -181,21 +94,11 @@ function Sallekhna() {
                 आत्मा।
               </p>
               <br />
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paragraphTagging">
                 सल्लेखना को संन्यास-मरण, समाधि-मरण आदि नामों से भी जाना जाता है।
               </p>
               <br />
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paragraphTagging">
                 जो गृहस्थ इस व्रत को शुद्ध मन से स्वीकार करता है, वह मित्रता,
                 शत्रुता और परिग्रह को त्याग देता है। उसे अपने रिश्तेदारों,
                 साथियों और नौकरों या परिचितों को माफ कर देना चाहिए और उनसे पिछले
@@ -208,12 +111,7 @@ function Sallekhna() {
                 चाहिए।
               </p>
               <br />
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paragraphTagging">
                 प्रारंभ में धीरे-धीरे भोजन छोड़कर केवल तरल पदार्थ लेना चाहिए और
                 अंत में तरल पदार्थ त्यागकर केवल उबला हुआ पानी ही लेना चाहिए तथा
                 अपनी क्षमता के अनुसार उपवास करना चाहिए। उसे सभी वासनाओं और
@@ -227,12 +125,7 @@ function Sallekhna() {
                 5) कामना करना इस व्रत के परिणामस्वरूप एक निश्चित इनाम के लिए।
               </p>
               <br />
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paragraphTagging">
                 यह सलाह दी गई है कि इस व्रत को सफलतापूर्वक करने के लिए संन्यासी
                 या गृहस्थ को ऐसे स्थान का चयन करना चाहिए जहां सरकार को इस व्रत
                 पर आपत्ति न हो और लोगों में ऐसे निर्णयों के प्रति सम्मान और समझ
@@ -241,12 +134,7 @@ function Sallekhna() {
                 और आंतरिक शांति सुनिश्चित करने के लिए ऐसी सावधानी आवश्यक है।
               </p>
               <br />
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paragraphTagging">
                 यह जाने बिना कि मृत्यु बहुत निकट या आसन्न है, सल्लेखना व्रत
                 अपनाने के विरुद्ध स्पष्ट और निश्चित निर्देश हैं। इसका एक
                 शास्त्रीय उदाहरण स्वयं आचार्य सामंतभद्र का है। भस्मरोग नामक
@@ -258,12 +146,7 @@ function Sallekhna() {
                 है। इसलिए उन्होंने अनुमति देने से इनकार कर दिया.
               </p>
               <br />
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paragraphTagging">
                 कई सल्लेखना आत्महत्या को लेकर भ्रमित हैं क्योंकि आत्महत्या शब्द
                 में सभी स्वयं-आरोपित मौतें शामिल हैं। स्वयं द्वारा अपनाये गये
                 साधनों द्वारा स्वयं को मारना ही आत्महत्या है। संस्कृत में
@@ -289,12 +172,7 @@ function Sallekhna() {
                 देती है, पीड़ित को आत्महत्या के भयानक कदम तक ले जाती है।
               </p>
               <br />
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paragraphTagging">
                 दूसरी ओर सल्लेखना में इस व्रत को अपनाने या उसकी पूर्ति में
                 उपरोक्त कोई भी मनोवैज्ञानिक या समाजशास्त्रीय विशेषता नहीं मिलती।
                 उसी प्रकार इरादों, स्थितियों, अपनाए गए साधनों और कार्य के परिणाम
@@ -305,12 +183,7 @@ function Sallekhna() {
                 या उसके परिणामों में भी बड़ा अंतर होता है।
               </p>
               <br />
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paragraphTagging">
                 इस व्रत को अपनाने वाले व्यक्ति का एकमात्र इरादा आध्यात्मिक है और
                 निश्चित रूप से अस्थायी नहीं है। प्रतिज्ञा को अपनाने से पहले कुछ
                 वर्षों तक अभ्यास करके सभी वासनाओं पर विजय प्राप्त करके मन की
@@ -326,12 +199,7 @@ function Sallekhna() {
                 अनुमति से ही अपनाया जाना चाहिए।
               </p>
               <br />
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paragraphTagging">
                 इस व्रत की पूर्ति के लिए क्या उपाय अपनाए जाते हैं? वे फांसी
                 देना, जहर देना, छुरा घोंपना, गोली मारना, गहरे पानी में डुबाना या
                 ऊंचाई से कूदना जैसे हिंसक साधन नहीं हैं। उसे सुनियमित सिद्धांतों
@@ -347,12 +215,7 @@ function Sallekhna() {
                 जाना चाहिए।
               </p>
               <br />
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paragraphTagging">
                 सल्लेखना द्वारा की गई मृत्यु का परिणाम न तो किसी के लिए दुखद है
                 और न ही दुखद, क्योंकि इस व्रत को अपनाने से पहले सभी प्रकार के
                 संबंधों को आम सहमति से समाप्त कर दिया गया है। इसका तात्कालिक
@@ -366,12 +229,7 @@ function Sallekhna() {
                 प्रेरणा और भक्ति की प्रशंसा करते हैं।
               </p>
               <br />
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paragraphTagging">
                 कुछ पश्चिमी लेखकों ने कहा है कि संलेखना भूख से की गई आत्महत्या
                 है। न्यायमूर्ति टी.के. तुलोक की राय में, "वे एक धार्मिक दर्शन के
                 तहत पैदा हुए और पले-बढ़े हैं जो दुनिया को भगवान की रचना के रूप
@@ -383,12 +241,7 @@ function Sallekhna() {
                 दिया है।
               </p>
               <br />
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paragraphTagging">
                 इस प्रकार, आत्महत्या और सल्लेखना के बीच कुछ भी समान नहीं है,
                 सिवाय इसके कि दोनों मामलों में मृत्यु होती है। आत्महत्या के
                 मामले में, मृत्यु आपत्तिजनक तरीकों से की जाती है क्योंकि नुकसान
@@ -398,12 +251,7 @@ function Sallekhna() {
                 शांति बनी रहती है।
               </p>
               <br />
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paragraphTagging">
                 सल्लेखना व्रत को अपनाना प्रत्येक व्यक्ति के लिए असंभव है क्योंकि
                 इसके लिए भक्त को यह दृढ़ विश्वास होना आवश्यक है कि आत्मा और शरीर
                 अलग-अलग हैं। यह व्रत उस व्यक्ति द्वारा अपनाया जाता है जिसने

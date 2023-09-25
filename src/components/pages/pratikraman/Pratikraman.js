@@ -14,7 +14,7 @@ function Pratikraman() {
 
   function ScrollHeight() {
     var content = document.querySelector("#parchment");
-    var container = document.querySelector("#contain");
+    var container = document.querySelector("#containingPart");
     if (content && container) {
       content.style.height = container.offsetHeight + "px";
     }
@@ -94,12 +94,7 @@ function Pratikraman() {
                   }}
                 />
               </p>
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paraTagshere">
                 आत्मा, अपने शुद्ध रूप में, अनंत धारणा, अनंत ज्ञान, अनंत शक्ति से
                 युक्त है और अनासक्त है। सांसारिक आत्मा में ये गुण दिखाई नहीं
                 देते क्योंकि वह कर्मों से गंदा होता है। धार्मिक सिद्धांतों और
@@ -115,12 +110,7 @@ function Pratikraman() {
                 एक संयोजन है। <br /> वे हैं:
               </p>
               <br />
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paraTagshere">
                 i) - सामायिक - समभाव की स्थिति <br />
                 ii) - चौविसंथो - चौबीस तीर्थंकरों की पूजा करना <br />
                 iii)- वंदना - साधुओं और साध्वियों को नमस्कार <br />
@@ -130,24 +120,9 @@ function Pratikraman() {
                 vi)- प्रत्याख्यान - त्याग
               </p>
               <br />
-              <h3
-                style={{
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  alignItems: "flex-start",
-                  textAlign: "flex-start",
-                  fontweight: "600",
-                }}
-              >
-                सामायिक
-              </h3>
+              <h3 className="hthreeTags">सामायिक</h3>
               <br />
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paraTagshere">
                 सामायिक में हम अड़तालीस मिनट तक समभाव में रहते हैं। सामायिक के
                 दौरान हम न केवल सभी सांसारिक मामलों को त्याग देते हैं, बल्कि
                 राग-द्वेष से भी दूर रहते हैं। यह गतिविधि हमें अपने जुनून और
@@ -160,24 +135,9 @@ function Pratikraman() {
                 है।
               </p>
               <br />
-              <h3
-                style={{
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  alignItems: "flex-start",
-                  textAlign: "flex-start",
-                  fontweight: "600",
-                }}
-              >
-                चौविसंथो
-              </h3>
+              <h3 className="hthreeTags">चौविसंथो</h3>
               <br />
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paraTagshere">
                 चौविसंथो का अर्थ है चौबीस तीर्थंकरों की आराधना। इसका पाठ करके हम
                 चौबीस तीर्थंकरों के प्रति अपना सम्मान प्रकट करते हैं। इसका पाठ
                 करते समय हमें याद आता है कि ये जिन कितने विजयी थे, जिन्होंने
@@ -186,24 +146,9 @@ function Pratikraman() {
                 इसे चतुर्विंशतिस्तव भी कहा जाता है।
               </p>
               <br />
-              <h3
-                style={{
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  alignItems: "flex-start",
-                  textAlign: "flex-start",
-                  fontweight: "600",
-                }}
-              >
-                वन्दना
-              </h3>
+              <h3 className="hthreeTags">वन्दना</h3>
               <br />
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paraTagshere">
                 वन्दना के दौरान हम भिक्षुओं और भिक्षुणियों को प्रणाम करते हैं और
                 उनके प्रति अपनी श्रद्धा व्यक्त करते हैं। वे हमारे वर्तमान
                 धार्मिक मार्गदर्शक और उपदेशक हैं। झुकते समय हम विनम्र हो जाते
@@ -213,24 +158,9 @@ function Pratikraman() {
                 हैं जो वर्तमान में यहां से बहुत दूर रह रहे हैं।)
               </p>
               <br />
-              <h3
-                style={{
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  alignItems: "flex-start",
-                  textAlign: "flex-start",
-                  fontweight: "600",
-                }}
-              >
-                प्रतिक्रमण
-              </h3>
+              <h3 className="hthreeTags">प्रतिक्रमण</h3>
               <br />
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paraTagshere">
                 प्रतिक्रमण दो शब्दों से मिलकर बना है, प्र यानी वापसी और अतिक्रमण
                 यानी उल्लंघन। इसका शाब्दिक अर्थ है उल्लंघनों से वापस लौटना। जैन
                 गृहस्थों के रूप में, हमें अन्य जीवित प्राणियों के प्रति हिंसा को
@@ -244,12 +174,7 @@ function Pratikraman() {
                 सकें।
               </p>
               <br />
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paraTagshere">
                 प्रतिक्रमण आमतौर पर दिन में दो बार किया जाता है: एक बार सुबह,
                 रायसी (सुबह) प्रतिक्रमण, उन चीजों के लिए पश्चाताप करने के लिए जो
                 हमने रात के दौरान किए होंगे और एक बार देर शाम देवासी (शाम)
@@ -270,24 +195,9 @@ function Pratikraman() {
                 चाहिए।
               </p>
               <br />
-              <h3
-                style={{
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  alignItems: "flex-start",
-                  textAlign: "flex-start",
-                  fontweight: "600",
-                }}
-              >
-                कायोत्सर्ग
-              </h3>
+              <h3 className="hthreeTags">कायोत्सर्ग</h3>
               <br />
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paraTagshere">
                 कायोत्सर्ग शब्द दो शब्दों काया अर्थात शरीर और उत्सर्ग अर्थात
                 त्याग करना से मिलकर बना है। कायोत्सर्ग का अर्थ है किसी के
                 शारीरिक आराम और शारीरिक गतिविधियों को त्यागना, इस प्रकार स्थिर
@@ -298,34 +208,14 @@ function Pratikraman() {
                 गतिविधियों पर नियंत्रण हासिल कर लेते हैं।
               </p>
               <br />
-              <h3
-                style={{
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  alignItems: "flex-start",
-                  textAlign: "flex-start",
-                  fontweight: "600",
-                }}
-              >
-                प्रत्याख्यान
-              </h3>
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <h3 className="hthreeTags">प्रत्याख्यान</h3>
+              <p className="paraTagshere">
                 यह कुछ गतिविधियों का औपचारिक त्याग है, जो कर्मों के प्रवाह को कम
                 या रोक देता है। प्रत्याख्यान हमें अपनी इच्छाओं पर नियंत्रण रखना
                 सीखने में मदद करता है और हमें बड़े त्याग के लिए तैयार करता है।
               </p>
               <br />
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
+              <p className="paraTagshere">
                 इस प्रकार, प्रतिक्रमण हमें दूसरों को नियंत्रित करने, अच्छा काम
                 करने वाले लोगों की सराहना करने और हमें उनके रास्ते पर ले जाने
                 में मदद करता है।

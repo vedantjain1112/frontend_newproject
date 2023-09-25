@@ -2,15 +2,6 @@
     position: relative;
     cursor: pointer;
   }
-
-  // .theme-toggle {
-  //   position: fixed;
-  //   top: 132px; 
-  //   right: 50px; 
-  //   z-index: 1000;
-  //   cursor: pointer;
-  // }
-  
   
   .toggle-slider {
     width: 26px;
@@ -44,3 +35,8 @@
     color: #000;
   }
   
+
+  .dark-mode {
+    background-color: #121745;
+    color: #fff !important;
+  }

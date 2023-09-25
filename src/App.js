@@ -20,6 +20,16 @@ import JainSymbol from "./components/pages/jainsymbol/JainSymbol";
 import Sutra from "./components/pages/sutra/Sutra";
 import Sects from "./components/pages/sects/JainSects";
 import Festivals from "./components/pages/jainfestivals/Festivals";
+import PanchParmeshthi from "./components/pages/five/PanchParmeshthi";
+import AArti from "./components/pages/aarti/AArti";
+import Chaityavandan from "./components/pages/palitana/Chaityavandan";
+import Taleti from "./components/pages/palitana/Taleti";
+import ShantinathDada from "./components/pages/palitana/ShantiDada";
+import RayanPaduka from "./components/pages/palitana/RayanPaduka";
+import PundrikSwami from "./components/pages/palitana/PundrikSwami";
+import AadinathDada from "./components/pages/palitana/AadinathDada";
+import Navvanu from "./components/pages/navvanu/99";
+// import AArtiMobile from "./components/pages/aarti/AArtiMobile";
 
 function App() {
   return (
@@ -44,19 +54,24 @@ function App() {
         <Route path="/library" element={<Sutra />} />
         <Route path="/sects" element={<Sects />} />
         <Route path="/festival" element={<Festivals />} />
+        <Route path="/panchparmeshthi" element={<PanchParmeshthi />} />
+        <Route path="/aarti" element={<AArti />} />
+        <Route path="/chaityavandan" element={<Chaityavandan />} />
+        <Route path="/taleti" element={<Taleti />} />
+        <Route path="/shantinath-dada" element={<ShantinathDada />} />
+        <Route path="/rayan-paduka" element={<RayanPaduka />} />
+        <Route path="/pundrik-swami" element={<PundrikSwami />} />
+        <Route path="/aadinath-dada" element={<AadinathDada />} />
+        <Route path="/99" element={<Navvanu />} />
+        {/* <Route path="/aartim" element={<AArtiMobile />} /> */}
         <Route path="/signup" element={<Signup />} />
         <Route path="/verify" element={<EmailVerification />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password/:token" element={<PasswordReset />} />
+        {/* <Route path="/admin" element={<Admin />} /> */}
       </Routes>
     </div>
   );
 }
 
 export default App;
-
-// {
-/* <Route element={<RequireUser />}>
-  <Route path="/admin" element={<Admin />} />
-</Route> */
-// }

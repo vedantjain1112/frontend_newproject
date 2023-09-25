@@ -1,0 +1,188 @@
+$itemsCount: 6; 
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+
+.gAarti {
+  background: linear-gradient(to bottom, 
+  rgba(0, 0, 255, 0.7),  
+  rgba(255, 255, 255, 0.7), 
+  rgba(255, 192, 203, 0.7), 
+  rgba(255, 0, 0, 0.7), 
+  rgba(255, 253, 208, 0.7)
+);
+backdrop-filter: blur(10px); 
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 150px;
+}
+
+.tAGHUMEIn {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1;
+  color: #423e37;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+// Tabs
+.tabs-controls {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 50px 0 50px;
+  list-style-type: none;
+}
+
+.tabs-controls__link {
+  position: relative;
+  display: block;
+  padding: 16px 32px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #423e37;
+  text-transform: uppercase;
+  text-decoration: none !important;
+
+  &:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 0;
+    height: 4px;
+    background-color: #423e37;
+    border-radius: 2px;
+    margin: auto;
+    content: "";
+    transition: width 0.4s;
+  }
+}
+
+.tabs-controls__link--active {
+  &:after {
+    width: 100%;
+  }
+}
+
+.tabs-controls__link:hover{
+  color: #423e37;
+}
+
+
+.cardsContainerneeernar {
+  position: relative;
+  z-index: 1;
+  width: 900px;
+  height: calc(100vh - 205px);
+  margin: 0 auto;
+}
+
+.carderHaha  {
+  position: absolute;
+  width: 900px;
+  height: 600px;
+  background-color: #edebd7;
+  border: 1px solid #423e37;
+  box-shadow: 9px 11px 3px 0px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  padding: 40px;
+
+  transition: transform 0.3s, opacity 0.2s;
+
+  &.hidden {
+    z-index: 100;
+    background-color: #fff;
+    color: #fff;
+    opacity: 0;
+
+    transition: color 0.5s, background-color 0.5s, transform 1s,
+      opacity 0.2s 0.4s;
+
+    .tAGHUMEIn {
+      color: #fff;
+      line-height: 30px;
+      word-spacing: 5px;
+      letter-spacing: 3px;
+      transition: color 0.5s;
+    }
+
+    @for $i from 1 through $itemsCount {
+      &:nth-of-type(#{$i}) {
+        transform: rotate(random(100) - 100 + deg)
+          translateX((random(1) + 100) * 1%)
+          translateY(random(60) * -1%)
+          scale(random(10) * 0.1)
+          skewX(random(12) + deg)
+          skewY(random(12) + deg);
+      }
+    }
+  }
+
+  @for $i from 1 through $itemsCount {
+    $zIndexStartValue: $itemsCount + 1; 
+    $xValue: ($i - 1) * 10px;
+    $yValue: ($i - 1) * 10px;
+    $zIndexValue: $itemsCount -
+      $i; 
+
+    &:nth-of-type(#{$i}) {
+      z-index: $zIndexValue;
+      transform: translateX(#{$xValue}) translateY(#{$yValue});
+    }
+  }
+}
+
+
+.carderHaha::-webkit-scrollbar{
+  width: 10px;
+}
+
+.right-align {
+  float: right;
+}
+
+
+// Define breakpoints for different screen sizes
+$small-screen: 576px; // Phones
+$medium-screen: 768px; // Tablets
+$large-screen: 992px; // Small desktops
+$xlarge-screen: 1200px; // Large desktops
+
+.gAarti {
+  // Existing styles for the background and fonts
+
+  @media screen and (max-width: $medium-screen) {
+    .tabs-controls {
+      padding: 30px 0; // Reduce padding for smaller screens
+    }
+
+    .tabs-controls__link {
+      font-size: 18px; // Decrease font size for smaller screens
+    }
+
+    .cardsContainerneeernar {
+      width: 100%; // Make the container full-width
+    }
+
+    .carderHaha {
+      width: 100%; // Make cards full-width
+      padding: 20px; // Reduce padding for smaller screens
+    }
+  }
+
+  @media screen and (max-width: $small-screen) {
+    .tabs-controls {
+      flex-direction: column; // Stack tabs vertically for small screens
+    }
+
+    .tabs-controls__link {
+      padding: 12px 0; // Adjust padding for stacked tabs
+    }
+  }
+}

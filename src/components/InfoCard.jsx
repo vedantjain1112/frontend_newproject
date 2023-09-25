@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import ThemeToggle from "../components/darkmode/ThemeToggle";
 import "./InfoCard.scss";
 
 function InfoCard({ searchTerm }) {
@@ -33,17 +32,15 @@ function InfoCard({ searchTerm }) {
     const escapedSearchTerm = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     const searchQuery = new RegExp(escapedSearchTerm, "i");
 
-    setFilteredData(
-      chaturmasData.filter((data) => {
-        const { name, sthal, paragraph } = data;
+    const filtered = chaturmasData.filter((data) => {
+      return (
+        searchQuery.test(data.name) ||
+        searchQuery.test(data.sthal) ||
+        searchQuery.test(data.paragraph)
+      );
+    });
 
-        return (
-          searchQuery.test(name) ||
-          searchQuery.test(sthal) ||
-          searchQuery.test(paragraph)
-        );
-      })
-    );
+    setFilteredData(filtered);
   }, [chaturmasData, searchTerm]);
 
   if (error) {
@@ -98,7 +95,7 @@ function InfoCard({ searchTerm }) {
         ) : (
           filteredData.map((data, index) => (
             <div
-              key={index}
+              key={data._id}
               className="wrappped"
               style={{ fontFamily: "Tiro Devanagari Hindi', serif" }}
             >

@@ -1,89 +1,154 @@
-.applicationNews{
-    scroll-behavior: smooth;
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
+.festivalsCLASSSSS{
+  --color-bg: #f0f0f0;
+  --color-text: #303030;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
 }
 
-.newspaper {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    flex-direction: column; 
-    justify-content: space-between; 
-    height: 100%;
-  }
-  
-  .headline {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px 5px 0 0;
-  }
-  
-  .headline h1 {
-    margin: 0;
-  }
-  
-  .content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-    scroll-behavior: smooth;
-  }
-  
-  .content.visible {
-    max-height: 300px; 
-  }
-  
-.content::-webkit-scrollbar{
-    width: 10px;
-    scroll-behavior: smooth;
+.ol-cards,
+.ol-cards *,
+.ol-cards *::before,
+.ol-cards *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.ol-cards {
+  --ol-cards-color-bg: var(--color-bg);
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 45em;
+  padding: 2em;
+  gap: 2em;
+  counter-reset: ol-cards-counter;
 }
 
+.ol-cards .festivalSLIlist {
+  display: grid;
+  grid-template-areas:
+    "step title"
+    "step content";
+  padding: 1em 2em 1em 0;
+  row-gap: 0.5em;
+  column-gap: 2em;
+  box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.4),
+    inset 0.05em 0.05em rgba(255, 255, 255, 1);
+  counter-increment: ol-cards-counter;
+  text-align: left;
+  background-color: var(--ol-cards-color-bg);
+  overflow:auto;
+}
 
+.ol-cards.alternate .festivalSLIlist:nth-child(even) {
+  grid-template-areas:
+    "title step"
+    "content step";
+  padding: 1em 0 1em 2em;
+}
 
-.buttonOFFESTivals {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    align-self: center; 
-    margin-top: auto; 
+.ol-cards .festivalSLIlist .step {
+  grid-area: step;
+  display: flex;
+  align-self: flex-start;
+  background-color: var(--ol-cards-color-accent);
+  border-radius: 0 50em 50em 0;
+  padding: 1em;
+  justify-content: flex-end;
+  box-shadow: inset 0.25em 0.25em 0.5em rgba(0, 0, 0, 0.4),
+    0em 0.05em rgba(255, 255, 255, 1);
+  flex: 1;
+  gap: 1em;
+}
+
+.ol-cards .festivalSLIlist .step::before {
+  content: "0" counter(ol-cards-counter);
+  flex: 1;
+  align-self: center;
+  color: var(--ol-cards-color-bg);
+  font-weight: bold;
+  font-size: 2em;
+  text-shadow: 0.025em 0.025em 0.125em rgba(0, 0, 0, 0.4);
+}
+.ol-cards.alternate li:nth-child(even) .step {
+  border-radius: 50em 0 0 50em;
+  flex-direction: row-reverse;
+}
+
+.ol-cards .festivalSLIlist .step i {
+  color: var(--ol-cards-color-accent);
+  width: 2em;
+  height: 2em;
+  font-size: 1.8em;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background-color: var(--ol-cards-color-bg);
+  box-shadow: 0.25em 0.25em 0.5em rgba(0, 0, 0, 0.4),
+    inset 0.05em 0.05em rgba(255, 255, 255, 1);
+}
+
+.ol-cards .festivalSLIlist .titleOFFESTIVClass {
+  grid-area: title;
+  color: var(--ol-cards-color-accent);
+  font-weight: bold;
+}
+.ol-cards .festivalSLIlist .contentOFFESTIVALS {
+  grid-area: content;
+  font-size: 0.9em;
+}
+
+@media only screen and (max-width: 500px) {
+  .ol-cards{
+    padding: 1em;
   }
-  
-.buttonOFFESTivals:focus {
-    outline: none;
+  .ol-cards .festivalSLIlist{
+    column-gap: 0em;
+    grid-template-areas:
+      'step title'
+      'content content';
+    grid-template-columns: min-content auto;
+    padding: 1em 0em;
   }
-  
-  .festivals-intro {
-    text-align: center;
-    padding: 20px;
-    color: black;
-    line-height: 30px;
-    letter-spacing: 2px; 
-    animation: bouncing 4s infinite;
+  .ol-cards.alternate .festivalSLIlist:nth-child(even){
+    column-gap: 0em;
+    grid-template-areas:
+      'title step'
+      'content content';
+    grid-template-columns: auto min-content ;
+    padding: 1em 0em;
   }
-  
-
-
-  @keyframes bouncing {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
+  .ol-cards .festivalSLIlist .titleOFFESTIVClass{
+    padding: 0 1em;
+    align-self: center;
+    width: auto;
+    
   }
+  .ol-cards .festivalSLIlist .step{
+    font-size: .5em;
+  }
+  .ol-cards .festivalSLIlist .contentOFFESTIVALS{
+    padding: 0 1em;
+  }
+}
 
-  
-  
-  
-  
+.contentOFFESTIVALS{
+  letter-spacing: 2px;
+  line-height: 30px;
+}
 
+@media (max-width: 768px) {
+  .someFestivIntro {
+    max-width: "600px";
+    padding: "10px";
+  }
+  .someFestivIntro p {
+    font-size: "16px";
+  }
+}

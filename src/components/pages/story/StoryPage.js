@@ -109,14 +109,7 @@ function StoryPage() {
                   }}
                 />
               </p>
-              <p
-                style={{
-                  lineHeight: "60px",
-                  letterSpacing: "3px",
-                }}
-              >
-                {selectedStory.content}
-              </p>
+              <p className="pHERE">{selectedStory.content}</p>
               <p className="cachet">
                 <img src="https://i.postimg.cc/4NBYNqCR/22.png" alt="Cachet" />
               </p>

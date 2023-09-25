@@ -38,18 +38,29 @@ function Quote() {
       <article className={`Testimonial${isChanging ? " changing" : ""}`}>
         <section>
           <div id="qout-one">
-            <p
-              className="bold center-align"
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                textAlign: "center",
-                color: "#fff",
-              }}
-            >
-              {quotes.length > 0 && quotes[currentQuoteIndex]}
-            </p>
+            {quotes.length > 0 ? (
+              <p
+                className="bold center-align"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  textAlign: "center",
+                  color: "#fff",
+                }}
+              >
+                {quotes[currentQuoteIndex]}
+              </p>
+            ) : (
+              <p
+                style={{
+                  color: "#fff",
+                  textAlign: "center",
+                }}
+              >
+                Loading quotes...
+              </p>
+            )}
           </div>
         </section>
         <div className="circles">

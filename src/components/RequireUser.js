@@ -1,6 +1,5 @@
 import React from "react";
 import { Navigate, Outlet } from "react-router";
-import Login from "./pages/login/Login";
 import { KEY_ACCESS_TOKEN, getItem } from "./utils/localStorageManager";
 
 function RequireUser() {
