@@ -16,7 +16,7 @@ function InfoCard({ searchTerm }) {
         setChaturmasData(response.data);
         const urls = {};
         response.data.forEach((data) => {
-          urls[data._id] = `http://localhost:4001/${data.image}`;
+          urls[data._id] = `http://localhost:4000/${data.image}`;
         });
         setImageUrls(urls);
 

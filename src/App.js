@@ -1,7 +1,7 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-// import Admin from "./components/pages/admin/Admin";
+import Admin from "./components/pages/admin/Admin";
 import Home from "./components/pages/home//Home";
 import Login from "./components/pages/login/Login";
 import Signup from "./components/pages/signup/Signup";
@@ -68,7 +68,7 @@ function App() {
         <Route path="/verify" element={<EmailVerification />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password/:token" element={<PasswordReset />} />
-        {/* <Route path="/admin" element={<Admin />} /> */}
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </div>
   );
