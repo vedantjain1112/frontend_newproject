@@ -12,6 +12,7 @@ function Signup() {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
+  const baseUrl = "https://serverbackend-3wwf.onrender.com";
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -21,7 +22,7 @@ function Signup() {
       return;
     }
     try {
-      const response = await axiosClient.post("/auth/signup", {
+      const response = await axiosClient.post(`${baseUrl}/auth/signup`, {
         name,
         email,
         password,

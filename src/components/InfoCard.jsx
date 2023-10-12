@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./InfoCard.scss";
+const baseUrl = "https://serverbackend-3wwf.onrender.com";
 
 function InfoCard({ searchTerm }) {
   const [chaturmasData, setChaturmasData] = useState([]);
@@ -11,12 +12,12 @@ function InfoCard({ searchTerm }) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/info/")
+      .get(`${baseUrl}/info/`)
       .then((response) => {
         setChaturmasData(response.data);
         const urls = {};
         response.data.forEach((data) => {
-          urls[data._id] = `http://localhost:4000/${data.image}`;
+          urls[data._id] = `${baseUrl}/${data.image}`;
         });
         setImageUrls(urls);
 

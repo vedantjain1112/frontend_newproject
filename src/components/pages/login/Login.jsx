@@ -5,6 +5,7 @@ import { axiosClient } from "../../utils/axiosClient";
 import { KEY_ACCESS_TOKEN, setItem } from "../../utils/localStorageManager";
 import { showErrorToast, showSuccessToast } from "../../utils/toastUtils";
 import Board from "../signup/Board";
+const baseUrl = "https://serverbackend-3wwf.onrender.com";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -15,7 +16,7 @@ function Login() {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      const response = await axiosClient.post("/auth/login", {
+      const response = await axiosClient.post(`${baseUrl}/auth/login`, {
         email,
         password,
       });

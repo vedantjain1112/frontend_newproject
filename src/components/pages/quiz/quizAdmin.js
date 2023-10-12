@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./quizAdmin.scss";
 import QuoteAdmin from "../../quotes/QuoteAdmin";
+const baseUrl = "https://serverbackend-3wwf.onrender.com";
 
 function QuizAdmin() {
   const [questions, setQuestions] = useState([]);
@@ -15,7 +16,7 @@ function QuizAdmin() {
   useEffect(() => {
     async function fetchQuestions() {
       try {
-        const response = await axios.get("http://localhost:4000/api/questions");
+        const response = await axios.get(`${baseUrl}/api/questions`);
         setQuestions(response.data);
       } catch (error) {
         console.error("Error fetching questions:", error);
@@ -37,7 +38,7 @@ function QuizAdmin() {
     }
 
     try {
-      const response = await axios.post("http://localhost:4000/api/questions", {
+      const response = await axios.post(`${baseUrl}/api/questions`, {
         text: newQuestion.text,
         answers: cleanedAnswers,
         correct: newQuestion.correct,
@@ -49,7 +50,7 @@ function QuizAdmin() {
         text: "",
         answers: [],
         correct: 0,
-        difficulty: "easy", // Reset the difficulty for the next question
+        difficulty: "easy",
       });
     } catch (error) {
       console.error("Error adding question:", error);
@@ -60,7 +61,7 @@ function QuizAdmin() {
     console.log("Deleting question with ID:", questionId);
 
     try {
-      await axios.delete(`http://localhost:4000/questions/${questionId}`);
+      await axios.delete(`${baseUrl}/questions/${questionId}`);
       const updatedQuestions = questions.filter(
         (question) => question._id !== questionId
       );

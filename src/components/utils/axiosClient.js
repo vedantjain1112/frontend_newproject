@@ -28,7 +28,6 @@ axiosClient.interceptors.response.use(
     const error = data.message;
 
     if (statusCode === 401 && !originalRequest._retry) {
-      // means the access token has expired
       originalRequest._retry = true;
 
       const response = await axios
